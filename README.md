@@ -1,7 +1,7 @@
 
 # Español
 
-## Aprendiendo #1: Typescript & Nest.js
+## Aprendiendo #0: Typescript & Nest.js
 
 [![Aprendiendo](https://github.com/Remojs/Learning-Typescript/blob/master/media/nest-banner.png?raw=true)]()
 
@@ -19,7 +19,7 @@ La idea de este ambicioso proyecto es que al largo plazo en mi carrera como prog
 
 # English
 
-## Learning #1: Typescript & Nest.js
+## Learning #0: Typescript & Nest.js
 
 [![Learning](https://github.com/Remojs/Learning-Typescript/blob/master/media/nest-banner.png?raw=true)]()
 
