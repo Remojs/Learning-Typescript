@@ -3,38 +3,25 @@
 //Ayuda a mantener la aplicacion organizada, mantenible y escalable
 
 import { Injectable } from '@nestjs/common';
-
+import { InjectModel } from '@nestjs/mongoose';
+import { Model } from 'mongoose';
+import { createTaskDto } from '../dto/create-task.dto';
 import { Task } from 'src/interfaces/Task'; //necesitamos crear nuestro propio tipo de dato
 @Injectable()
 export class TasksService {
-  tasks: Task[] = [
-    {
-      id: 1,
-      title: 'testing',
-      description: 'testing description',
-      done: true,
-    },
-    {
-      id: 2,
-      title: 'testing2',
-      description: 'testing description2',
-      done: true,
-    },
-    {
-      id: 3,
-      title: 'testing3',
-      description: 'testing description3',
-      done: true,
-    },
-  ];
+  constructor(@InjectModel('Task') private taskModel: Model<Task>) {}
 
-  //estos son los metodos que tiene mi servicio de tasks, pueden ser reutilizados cuantas veces se requiera en el proyectso
-
-  getTasks(): Task[] {
-    return this.tasks;
+  async getTasks() {
+    return await this.taskModel.find();
   }
 
-  getTask(id: number): Task {
-    return this.tasks.find((task) => task.id === id);
+  async getTask(id: string) {
+    return await this.taskModel.findById(id);
+  }
+
+  async createTask(task: createTaskDto) {
+    const newtTask = new this.taskModel(task);
+    await newtTask.save();
+    return 'saved';
   }
 }

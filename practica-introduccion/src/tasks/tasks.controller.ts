@@ -19,13 +19,19 @@ export class TasksController {
   constructor(private taskService: TasksService) {}
 
   @Get('taskService') //hacemos un controller con el task service de getTasks()
-  getTasksService(): Task[] {
+  getTasksService(): Promise<Task[]> {
     return this.taskService.getTasks();
   }
 
   @Get('taskService/:taskId') //hacemos un controller con el task service de getTask()
   getTaskService(@Param('taskId') taskId: string) {
-    return this.taskService.getTask(parseInt(taskId));
+    return this.taskService.getTask(taskId);
+  }
+
+  //ejemplo de controller post task
+  @Post()
+  createTaskController(@Body() task: createTaskDto): Promise<string> {
+    return this.taskService.createTask(task);
   }
 
   @Get() //decorador - Se puede especificar una sub-ruta de esta manera @Get('/taskList'), por lo que esta nueva ruta seria 'tasks/taskList'
