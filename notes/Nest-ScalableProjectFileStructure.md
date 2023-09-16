@@ -7,18 +7,18 @@
 
 Estructura completa: 
 
-- *-SRC*
-- *-CONFIG*
-- *-MODULES* <br>
+- **-SRC**<br>
+- **-CONFIG**
+- **-MODULES** <br>
     |-- *users* <br>
-            |--- **controllers** <br>
-            |--- **dtos** <br> 
-            |--- **services** <br> 
-            |--- **schemas** <br> 
-- *-PROVIDERS*
-- *-PUBLIC* <br>
-- **--app.controller.spec.ts** <br>
-- **--app.controller.ts** <br>
-- **--app.module.ts** <br>
-- **--app.service.ts** <br>
-- **--main.ts** <br>
+            ||--- *controllers* <br>
+            ||--- *dtos* <br> 
+            ||--- *services* <br> 
+            ||--- *schemas* <br> <br>
+- **-PROVIDERS**
+- **-PUBLIC** <br>
+- *--app.controller.spec.ts* <br>
+- *--app.controller.ts* <br>
+- *--app.module.ts* <br>
+- *--app.service.ts* <br>
+- *--main.ts* <br>
