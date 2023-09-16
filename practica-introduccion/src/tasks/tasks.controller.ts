@@ -6,6 +6,8 @@ import {
   Delete,
   Body,
   Param,
+  Req,
+  Res,
 } from '@nestjs/common';
 
 import { createTaskDto } from '../dto/create-task.dto'; //traigo el dto
@@ -47,5 +49,19 @@ export class TasksController {
   deleteTaskId(@Param('id') id): string {
     console.log(id);
     return `Deleting a task with id ${id}`;
+  }
+
+  @Put(':id')
+  editTaskId(@Body() task: createTaskDto, @Param('id') id): string {
+    console.log(task);
+    console.log(id);
+    return 'Editing a task';
+  }
+
+  //usando controller con express, res, req
+  //no se recomienda, mejor usar nest puro
+  @Get()
+  getTasksExpress(@Req() req, @Res() res) {
+    return res.send('Hello World!');
   }
 }
