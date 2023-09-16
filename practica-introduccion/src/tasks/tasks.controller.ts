@@ -11,9 +11,23 @@ import {
 } from '@nestjs/common';
 
 import { createTaskDto } from '../dto/create-task.dto'; //traigo el dto
+import { TasksService } from './tasks.service';
+import { Task } from 'src/interfaces/Task'; //traigo el tipo de dato Task
 
 @Controller('tasks')
 export class TasksController {
+  constructor(private taskService: TasksService) {}
+
+  @Get('taskService') //hacemos un controller con el task service de getTasks()
+  getTasksService(): Task[] {
+    return this.taskService.getTasks();
+  }
+
+  @Get('taskService/:taskId') //hacemos un controller con el task service de getTask()
+  getTaskService(@Param('taskId') taskId: string) {
+    return this.taskService.getTask(parseInt(taskId));
+  }
+
   @Get() //decorador - Se puede especificar una sub-ruta de esta manera @Get('/taskList'), por lo que esta nueva ruta seria 'tasks/taskList'
   getTasks(): string {
     //especifico el tipo de dato

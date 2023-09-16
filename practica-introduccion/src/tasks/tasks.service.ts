@@ -28,11 +28,13 @@ export class TasksService {
     },
   ];
 
+  //estos son los metodos que tiene mi servicio de tasks, pueden ser reutilizados cuantas veces se requiera en el proyectso
+
   getTasks(): Task[] {
     return this.tasks;
   }
 
-  getTask(id): Task {
+  getTask(id: number): Task {
     return this.tasks.find((task) => task.id === id);
   }
 }
