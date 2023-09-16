@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Put, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Put, Delete, Body } from '@nestjs/common';
 
 @Controller('tasks')
 export class TasksController {
@@ -9,8 +9,9 @@ export class TasksController {
   }
 
   @Post('postTask')
-  createTask(): string {
-    return 'Creating a task'
+  createTask(@Body() task): string {
+    console.log(task); //recibe la tarea desde el cliente, se puede squematizar los datos que llegan con DTO Schemas.
+    return 'Creating a task';
   }
 
   @Put('updateTask')
