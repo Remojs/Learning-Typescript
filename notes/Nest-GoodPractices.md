@@ -1,5 +1,7 @@
 # Buenas practicas de nest
 
+- *Usa singulares y plurales para definir nombres en carpetas y archivos* En carpetas usa los nombres en plural "Services", pero en archivos usa en singular "task.service.ts"
+
 - *Organiza tu proyecto siguiendo la estructura convencional de Nest.js*. Utiliza los directorios controller, service, dto, module, etc., para mantener una organización coherente.
 
 - *Crea módulos pequeños y reutilizables que tengan una única responsabilidad*. Esto facilita la escalabilidad y el mantenimiento.
