@@ -20,4 +20,19 @@
 - El **Module.ts** es el indice de cada modulo
 - Para generar un controller, servicio o lo que sea se usa el comando **Nest g -cosa- -nombre-** (ejemplo: nest g controller Tasks)
 - Si pongo un ? al definir datos significa que dicho dato es opcional (ejemplo: Id?: number;)
+- Se puede usar el decorador @Param de la siguiente manera: 
+    consiguiendo acceder a todos los parametros de una, sin necesidad de especificar uno por uno
+    ```typescript
+    getProducto(@Param() param):string { return `el producto es ${params.id}`}
+    ```
+- Tambien se puede usar de esta manera: 
+    consiguiendo acceder a todos los parametros de una, pero especificando cada parametro individualmente
+    ```typescript
+    getProducto(
+        @Param('query') query, 
+        @Param('page') page,
+        @Param('id') id,
+        ):string { 
+            return `el producto es ${id}, con ${nombre} y ${query}`}
+    ```
 
