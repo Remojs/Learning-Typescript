@@ -1,4 +1,14 @@
-import { Controller, Get, Post, Put, Delete, Body } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Put,
+  Delete,
+  Body,
+  Param,
+} from '@nestjs/common';
+
+import { createTaskDto } from '../dto/create-task.dto'; //traigo el dto
 
 @Controller('tasks')
 export class TasksController {
@@ -8,9 +18,16 @@ export class TasksController {
     return 'Hello World!';
   }
 
+  //tambien se puede enviar json como respuesta en el return
+  @Get('jsonTask')
+  getTasksJson(): { hello: string } {
+    return { hello: 'world' };
+  }
+
   @Post('postTask')
-  createTask(@Body() task): string {
-    console.log(task); //recibe la tarea desde el cliente, se puede squematizar los datos que llegan con DTO Schemas.
+  createTask(@Body() task: createTaskDto /* Indico el DTO*/): string {
+    console.log(task.title, task.description, task.done);
+    //recibe la tarea desde el cliente, se puede squematizar los datos que llegan con DTO Schemas.
     return 'Creating a task';
   }
 
@@ -22,5 +39,13 @@ export class TasksController {
   @Delete('deleteTask')
   deleteTask(): string {
     return 'Deleting a task';
+  }
+
+  //controller con ruta con parametro
+
+  @Delete(':id')
+  deleteTaskId(@Param('id') id): string {
+    console.log(id);
+    return `Deleting a task with id ${id}`;
   }
 }
