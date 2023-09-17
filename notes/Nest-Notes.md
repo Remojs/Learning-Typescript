@@ -37,4 +37,13 @@
         ):string { 
             return `el producto es ${id}, con ${nombre} y ${query}`}
     ```
-
+- La estructura de los controllers es masomenos asi: 
+    ```typescript
+    @Controller('tasks') //2. a la ruta /tasks
+    export class TaskController {
+        @Get() //1. cuando llamen por un metodo GET
+        helloworld() { //3. quiero que ejecutes este codigo
+            return 'Hello World';
+        }
+    }
+    ```
