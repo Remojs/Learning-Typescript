@@ -13,12 +13,14 @@
 - Es importante saber definir bien cada modulo en nest para mantener la aplicacion escalable.
 - Las interafaces nos permiten crear nuestos propios tipos de datos
 - Los DTO sirven para transferir datos, mientras que las interfaces se utilizan para las transferencias internas en la aplicacion
+- La inyeccion de dependencias es una tecnica en la cual 
 
 ## Codigo / Estructura de carpetas
-
+- Todo lo que esta afuera de */Src* es archivo de configuracion
 - El **Main.ts** es el nucleo del proyecto y arrancador de la app
 - El **Module.ts** es el indice de cada modulo
 - Para generar un controller, servicio o lo que sea se usa el comando **Nest g -cosa- -nombre-** (ejemplo: nest g controller Tasks)
+- Si se agrega un -no-spec al final del comando no se crea el archivo de testing
 - Si pongo un ? al definir datos significa que dicho dato es opcional (ejemplo: Id?: number;)
 - Se puede usar el decorador @Param de la siguiente manera: 
     consiguiendo acceder a todos los parametros de una, sin necesidad de especificar uno por uno
