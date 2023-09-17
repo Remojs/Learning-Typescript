@@ -1,12 +1,12 @@
-import { Controller, Get } from '@nestjs/common';
-import { GetJobsService } from '../services/getAllJobs.service';
+import { Controller, Delete, Param } from '@nestjs/common';
+import { DeleteJobsService } from '../services/deleteJobs.service';
 
 @Controller('jobs')
-export class JobsController {
-  constructor(private getJobsService: GetJobsService) {}
+export class DeleteJobsController {
+  constructor(private deleteJobsService: DeleteJobsService) {}
 
-  @Get()
-  getjobs() {
-    return this.getJobsService.getAllJobs();
+  @Delete(':id')
+  deletejobs(@Param(':id') id: string) {
+    return this.deleteJobsService.deleteJobs(id);
   }
 }
