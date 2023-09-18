@@ -5,7 +5,7 @@
 
 [![Aprendiendo](https://github.com/Remojs/Learning-Typescript/blob/master/media/nest-banner.png?raw=true)]()
 
-¡Bienvenido a mi repositorio de repaso de Typescript, Mi meta es repasar Nest.js y Typescript para una posicion laboral.
+¡Bienvenido a mi repositorio de repaso de Typescript, Mi meta es repasar Nest.js y Typescript para una posicion laboral. Practicaré con proyectos reales, así como con simulaciones que no tienen un propósito funcional sino de aprendizaje, para familiarizarme con cómo se mueven los datos entre módulos y cómo maximizar la modularización promovida por Nest, así como para mejorar mi rendimiento y codificación en el framework.
 
 ## Mas sobre el proyecto
 
@@ -23,7 +23,7 @@ La idea de este ambicioso proyecto es que al largo plazo en mi carrera como prog
 
 [![Learning](https://github.com/Remojs/Learning-Typescript/blob/master/media/nest-banner.png?raw=true)]()
 
-Welcome to my Typescript review repository, My goal is to review Nest.js and Typescript for a job position.
+Welcome to my Typescript review repository, My goal is to review Nest.js and Typescript for a job position. I will practice with real projects, as well as with simulations that do not have a functional purpose but rather a learning purpose, to familiarize myself with how data moves between modules and how to maximize the modularization promoted by Nest, as well as to improve my performance and coding in the framework.
 
 ## More about the project
 
