@@ -12,7 +12,7 @@
 
 - Es importante saber definir bien cada modulo en nest para mantener la aplicacion escalable.
 - Las interafaces nos permiten crear nuestos propios tipos de datos
-- Los DTO sirven para transferir datos, mientras que las interfaces se utilizan para las transferencias internas en la aplicacion
+- Los DTO sirven para transferir y validar datos, mientras que las interfaces se utilizan para las transferencias internas en la aplicacion
 - La inyeccion de dependencias es una tecnica en la cual 
 
 ## Codigo / Estructura de carpetas
