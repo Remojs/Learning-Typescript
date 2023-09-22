@@ -13,7 +13,7 @@ El repositorio constara de 5 proyectos, los cuales tendran un orden especifico:
 - Proyecto #4: Proyecto con la misma complejidad del #3, pero fomentando el uso de buenas practicas y tecnologias o herramientas no usadas anteriormente
 - Proyecto #5: Converge toda la enseñanza y practica en un proyecto real el cual debe tener todo lo visto anteriormente
 
-## Mas sobre las "Aprendiendo Series"
+## Mas sobre las "Learning Series"
 
 La idea de este ambicioso proyecto es que al largo plazo en mi carrera como programador pueda aprender estas tecnologias a nivel basico, intermedio o avanzado, dependiendo de cuanto me guste y sus caracteristicas. Mi objetivo no es especializarme en todas, sino aprenderlas a un nivel en el que sea capaz de desarrollar algo por cuenta propia. ira evolucionando a medida que vaya avanzando y pasando el tiempo. Ire a mi ritmo y sin presiones.
 
