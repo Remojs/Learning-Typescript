@@ -6,6 +6,9 @@ import {
   Delete,
   Param,
   Body,
+  ConflictException,
+  NotFoundException,
+  HttpCode,
 } from '@nestjs/common';
 import { SeriesService } from './series.service';
 import { CreateSerieDTO } from 'src/dto/create-serie.dto';
@@ -20,22 +23,42 @@ export class SeriesController {
   }
 
   @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.seriesService.findOne(id);
+  async findOne(@Param('id') id: string) {
+    const serie = await this.seriesService.findOne(id);
+    if (!serie) {
+      throw new NotFoundException('Serie no encontrada');
+    }
+    return serie;
   }
 
   @Post()
   createOne(@Body() body: CreateSerieDTO) {
-    return this.seriesService.create(body);
+    try {
+      return this.seriesService.create(body);
+    } catch (error) {
+      if (error.code == 11000) {
+        throw new ConflictException('La serie ya existe');
+      }
+      throw error;
+    }
   }
 
   @Delete(':id')
-  deleteOne(@Param('id') id: string) {
-    return this.seriesService.delete(id);
+  @HttpCode(204)
+  async deleteOne(@Param('id') id: string) {
+    const serie = await this.seriesService.delete(id);
+    if (!serie) {
+      throw new NotFoundException('Serie no encontrada');
+    }
+    return serie;
   }
 
   @Put(':id')
-  updateOne(@Param('id') id: string, @Body() body: any) {
-    return this.seriesService.update(id, body);
+  async updateOne(@Param('id') id: string, @Body() body: any) {
+    const serie = await this.seriesService.update(id, body);
+    if (!serie) {
+      throw new NotFoundException('Serie no encontrada');
+    }
+    return serie;
   }
 }
