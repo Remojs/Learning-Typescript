@@ -17,7 +17,7 @@ El repositorio constara de 5 proyectos, los cuales tendran un orden especifico:
 
 La idea de este ambicioso proyecto es que al largo plazo en mi carrera como programador pueda aprender estas tecnologias a nivel basico, intermedio o avanzado, dependiendo de cuanto me guste y sus caracteristicas. Mi objetivo no es especializarme en todas, sino aprenderlas a un nivel en el que sea capaz de desarrollar algo por cuenta propia. ira evolucionando a medida que vaya avanzando y pasando el tiempo. Ire a mi ritmo y sin presiones.
 
-[![Aprendiendo](https://github.com/Remojs/Learning-Java/blob/master/readme-media/aprendiendo-banner.png?raw=true)]()
+[![Aprendiendo](https://github.com/Remojs/Learning-Java/blob/master/readme-media/aprendiendo-series.png?raw=true)]()
 
 ¡Gracias por acompañarme en esta aventura de aprendizaje!
 
@@ -41,6 +41,6 @@ The repository will consist of 5 projects, which will have a specific order:
 
 The idea of this ambitious project is that in the long term in my career as a programmer I can learn these technologies at a basic, intermediate or advanced level, depending on how much I like them and their features. My goal is not to specialize in all of them, but to learn them at a level where I will be able to develop something on my own. I will evolve as time goes by. I will go at my own pace and without pressure.
 
-[![Learning](https://github.com/Remojs/Learning-Java/blob/master/readme-media/aprendiendo-banner.png?raw=true)]()
+[![Learning](https://github.com/Remojs/Learning-Java/blob/master/readme-media/aprendiendo-series.png?raw=true)]()
 
 Thank you for joining me in this learning adventure!
