@@ -7,13 +7,13 @@ import {
   ParseArrayPipe,
   Post,
   Patch,
-} from '@nestjs/common';
-import { createUserDTO } from 'src/dto/create-user.dto';
-import { UsersService } from '../services/user.service';
-import { User } from '../entitys/user.entity';
-import { updateUserDTO } from 'src/dto/update-user.dto';
+} from "@nestjs/common";
+import { createUserDTO } from "src/dto/create-user.dto";
+import { UsersService } from "../services/user.service";
+import { User } from "../entitys/user.entity";
+import { updateUserDTO } from "src/dto/update-user.dto";
 
-@Controller('users')
+@Controller("users")
 export class UsersController {
   constructor(private usersService: UsersService) {}
 
@@ -22,8 +22,8 @@ export class UsersController {
     return this.usersService.getUsers();
   }
 
-  @Get(':id')
-  getUserById(@Param('id', ParseArrayPipe) id: number): Promise<User> {
+  @Get(":id")
+  getUserById(@Param("id", ParseArrayPipe) id: number): Promise<User> {
     return this.usersService.getUserById(id);
   }
 
@@ -32,14 +32,14 @@ export class UsersController {
     return this.usersService.createUser(newUser);
   }
 
-  @Delete(':id')
-  deleteUser(@Param('id', ParseArrayPipe) id: number) {
+  @Delete(":id")
+  deleteUser(@Param("id", ParseArrayPipe) id: number) {
     return this.usersService.deleteUser(id);
   }
 
-  @Patch(':id')
+  @Patch(":id")
   UpdateUser(
-    @Param('id', ParseArrayPipe) id: number,
+    @Param("id", ParseArrayPipe) id: number,
     @Body() user: updateUserDTO,
   ) {
     return this.usersService.updateUser(id, user);

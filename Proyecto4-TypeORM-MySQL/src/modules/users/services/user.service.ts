@@ -1,9 +1,10 @@
-import { Injectable } from '@nestjs/common';
-import { InjectRepository } from '@nestjs/typeorm';
-import { User } from '../entitys/user.entity';
-import { Repository } from 'typeorm';
-import { createUserDTO } from 'src/dto/create-user.dto';
-import { updateUserDTO } from 'src/dto/update-user.dto';
+import { Injectable } from "@nestjs/common";
+import { InjectRepository } from "@nestjs/typeorm";
+import { User } from "../entitys/user.entity";
+import { Repository } from "typeorm";
+import { createUserDTO } from "src/dto/create-user.dto";
+import { updateUserDTO } from "src/dto/update-user.dto";
+import { HttpException } from "@nestjs/common/exceptions";
 
 @Injectable()
 export class UsersService {
@@ -12,6 +13,12 @@ export class UsersService {
   ) {}
 
   createUser(user: createUserDTO) {
+    const userFound = this.userRepository.findOne({
+      where: { username: user.username },
+    });
+
+    if (userFound) return new HttpException("Ya existe ese nombre", 400);
+
     const newUser = this.userRepository.create(user);
     this.userRepository.save(newUser);
   }
