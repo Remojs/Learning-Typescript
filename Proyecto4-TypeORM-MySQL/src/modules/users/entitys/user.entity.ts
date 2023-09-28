@@ -7,7 +7,7 @@ import {
   OneToMany,
 } from "typeorm";
 import { Profile } from "./profile.entity";
-import { Post } from "./post.entity";
+import { Post } from "../../posts/entitys/post.entity";
 
 @Entity({ name: "users" })
 export class User {
