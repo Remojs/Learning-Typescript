@@ -41,7 +41,12 @@ export class UsersService {
     return this.userRepository.delete({ id });
   }
 
-  updateUser(id: number, user: updateUserDTO) {
-    return this.userRepository.update({ id }, user);
+  async updateUser(id: number, user: updateUserDTO) {
+    const userFound = await this.userRepository.findOne({ where: { id } });
+    if (!userFound) {
+      return new HttpException("Usuario no encontrado", HttpStatus.NOT_FOUND);
+    }
+    const updateUser = Object.assign(userFound, user);
+    return this.userRepository.save(updateUser);
   }
 }
