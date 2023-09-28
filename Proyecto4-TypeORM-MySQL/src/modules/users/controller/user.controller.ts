@@ -23,7 +23,7 @@ export class UsersController {
   }
 
   @Get(":id")
-  getUserById(@Param("id", ParseArrayPipe) id: number): Promise<User> {
+  getUserById(@Param("id", ParseArrayPipe) id: number) {
     return this.usersService.getUserById(id);
   }
 
