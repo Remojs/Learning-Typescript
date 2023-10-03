@@ -1,6 +1,6 @@
 import { IsString, IsOptional, IsDate } from 'class-validator';
 
-export class CreateSerieDTO {
+export class EditJobDTO {
   @IsDate()
   @IsOptional()
   date: Date;
