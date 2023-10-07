@@ -19,7 +19,6 @@ La idea de este ambicioso proyecto es que al largo plazo en mi carrera como prog
 
 [![Aprendiendo](https://github.com/Remojs/Learning-Java/blob/master/readme-media/aprendiendo-series.png?raw=true)]()
 
-¡Gracias por acompañarme en esta aventura de aprendizaje!
 
 #
 
