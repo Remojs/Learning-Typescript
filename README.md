@@ -12,6 +12,7 @@ El repositorio constara de 5 proyectos, los cuales tendran un orden especifico:
 - Proyecto #3: Proyecto mas avanzado que los anteriores, se centra en ser completamente funcional
 - Proyecto #4: Proyecto con la misma complejidad del #3, pero fomentando el uso de buenas practicas y tecnologias o herramientas no usadas anteriormente
 - Proyecto #5: Converge toda la enseñanza y practica en un proyecto real el cual debe tener todo lo visto anteriormente
+- Tambien hay opcion a un Proyecto #6, el cual es un proyecto ya realizado en otra tecnologia, el cual se adapta a la nueva aprendida
 
 ## Mas sobre las "Learning Series"
 
